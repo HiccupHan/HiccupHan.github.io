@@ -66,7 +66,7 @@ It is reasonable to assume from common knowledge and logic that the relationship
 Ridge regression, a regularized version of linear regression, works by minimizing residual sum of squares. This model works well for this dataset since it introduces an additional term to penalize large weights, which helps prevent overfitting. Our dataset contains a large number of features, and may exhibit multicollinearity, and Ridge Regression works well to address these concerns. Compared to Linear Regression, Ridge Regression can shrink weights of less important features and prevent overfitting, which improves generalization.
 
 The loss function of ridge regression is:
-
+<p>
 \[
 L(\beta) = \sum_{i=1}^{n} \left( y_i - \hat{y}_i \right)^2 + \lambda \sum_{j=1}^{p} \beta_j^2
 \]
@@ -76,7 +76,7 @@ Where:
 - \( \hat{y}_i \) is the predicted value for the \( i \)-th sample.
 - \( \beta_j \) are the weights of the model.
 - \( \lambda \) is the regularization parameter
-
+</p>
 Using the Scikit-Learn library, we can create a Ridge Regression model easily and train it on our dataset
 
 ```python
@@ -117,6 +117,7 @@ This model can then be used as a baseline for the other tests that will be perfo
 Just for testing, I trained a very basic neural network with a classic four layer neural network consisting of an input layer with 64 neurons with ReLU activation function, a dropout layer, a hidden layer with 32 neurons and using ReLU function again, and an output layer with a linear activation function. Adam optimizer is used for training since it is a popular optimization algorithm combining the benefits of both AdaGrad and RMSProp. It adjusts the learning rate for each parameter individually, uses momentum to accelerate the training process and avoid falls into local minimums, and is computationally efficient.  Mean Absolute Error is used to evaluate the model's performance. 
 
 The ReLU activation function is:
+<p>
 \[ReLU(x) = max(0, x)\] 
 And MAE is calculated as 
 \[MAE = (1/n) * Σ |y_i - ŷ_i|\]
@@ -124,11 +125,11 @@ Where:
 - \( y_i \) is the actual value for the \(i\)-th data point,
 - \( \hat{y}_i \) is the predicted value for the \(i\)-th data point,
 - \( n \) is the total number of data points.
-
+</p>
 After adjusting the learning rate, 
 
 The loss function of ridge regression is:
-
+<p>
 \[
 L(\beta) = \sum_{i=1}^{n} \left( y_i - \hat{y}_i \right)^2 + \lambda \sum_{j=1}^{p} \beta_j^2
 \]
@@ -138,7 +139,7 @@ Where:
 - \( \hat{y}_i \) is the predicted value for the \( i \)-th sample.
 - \( \beta_j \) are the weights of the model.
 - \( \lambda \) is the regularization parameter
-
+</p>
 Using the TensorFlow Keras library, we can construct the neural network
 
 ```python
