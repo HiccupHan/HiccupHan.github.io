@@ -79,7 +79,7 @@ Where:
 - \( \hat{y}_i \) is the predicted value for the \( i \)-th sample
 </p>
 <p>
-- \( \beta_j \) are the weights of the model
+- \(\beta_j\) are the weights of the model
 </p>
 <p>
 - \( \lambda \) is the regularization parameter
