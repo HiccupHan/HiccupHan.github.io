@@ -70,11 +70,18 @@ The loss function of ridge regression is:
 \[
 L(\beta) = \sum_{i=1}^{n} \left( y_i - \hat{y}_i \right)^2 + \lambda \sum_{j=1}^{p} \beta_j^2
 \]
-
+</p>
 Where:
-- \( y_i \) is the actual value for the \( i \)-th sample.
-- \( \hat{y}_i \) is the predicted value for the \( i \)-th sample.
-- \( \beta_j \) are the weights of the model.
+<p>
+- \( y_i \) is the actual value for the \( i \)-th sample
+</p>
+<p>
+- \( \hat{y}_i \) is the predicted value for the \( i \)-th sample
+</p>
+<p>
+- \( \beta_j \) are the weights of the model
+</p>
+<p>
 - \( \lambda \) is the regularization parameter
 </p>
 Using the Scikit-Learn library, we can create a Ridge Regression model easily and train it on our dataset
@@ -121,23 +128,32 @@ The ReLU activation function is:
 \[ReLU(x) = max(0, x)\] 
 And MAE is calculated as 
 \[MAE = (1/n) * Σ |y_i - ŷ_i|\]
-Where:
-- \( y_i \) is the actual value for the \(i\)-th data point,
-- \( \hat{y}_i \) is the predicted value for the \(i\)-th data point,
-- \( n \) is the total number of data points.
 </p>
-After adjusting the learning rate, 
-
+Where:
+<p>
+- \( y_i \) is the actual value for the \(i\)-th data point
+</p>
+<p>
+- \( \hat{y}_i \) is the predicted value for the \(i\)-th data point
+</p>
+<p>
+- \( n \) is the total number of data points
+</p>
 The loss function of ridge regression is:
 <p>
 \[
 L(\beta) = \sum_{i=1}^{n} \left( y_i - \hat{y}_i \right)^2 + \lambda \sum_{j=1}^{p} \beta_j^2
 \]
-
+</p>
 Where:
-- \( y_i \) is the actual value for the \( i \)-th sample.
-- \( \hat{y}_i \) is the predicted value for the \( i \)-th sample.
-- \( \beta_j \) are the weights of the model.
+<p>
+- \( y_i \) is the actual value for the \( i \)-th sample
+</p>
+<p>
+- \( \hat{y}_i \) is the predicted value for the \( i \)-th sample
+</p>
+- \( \beta_j \) are the weights of the model
+<p>
 - \( \lambda \) is the regularization parameter
 </p>
 Using the TensorFlow Keras library, we can construct the neural network
