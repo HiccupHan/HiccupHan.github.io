@@ -207,7 +207,10 @@ Obviously, using a neural network to model this simple linear relationship is an
 
 ## PCA
 #### Overview
-As mentioned before, the dataset contains a comprehensive list of features, which prompts the question of whether they are all needed. I hence used PCA on the original dataset and used Ridge Regression again to see the performance. PCA will ideally reduce the dimensionality of the original dataset and keep only essential data, effectively compressing the dataset. 
+As mentioned before, the dataset contains a comprehensive list of features, which prompts the question of whether they are all needed. I hence used PCA on the original dataset and used Ridge Regression again to see the performance. PCA will ideally reduce the dimensionality of the original dataset and keep only essential data, effectively compressing the dataset.
+
+![image](assets/IMG/pca.png)
+*Figure 4: Variance by Number of Principal Components*
 
 Using the Scikit-Learn library, we can perform PCA on the original dataset to see how many components we need to maintain 90% cumulative variance, which allows for an informative representation of the original data.
 
@@ -238,7 +241,9 @@ X_reduced = pca_final.fit_transform(X_scaled)
 ```
 
 #### Results
-Surprisingly, to maintain 90% cumulative variance, 17 principal components are needed, which is a far cry from reducing the dataset by a substantial amount. By using Ridge Regression with only 17 principal components, a noticeable performance degradation can already be observed, since RMSE becomes 2.8954. Accuracy is still reasonable but significant lower at 62.14% using the same metric of a tolerance of 2 points. That tolerance needs to be increased to more than 6 to see similar performance, which is acceptable.
+Surprisingly, to maintain 90% cumulative variance, 17 principal components are needed, which is a far cry from reducing the dataset by a substantial amount. All of the features are almost equally important.
+
+By using Ridge Regression with only 17 principal components, a noticeable performance degradation can already be observed, since RMSE becomes 2.8954. Accuracy is still reasonable but significant lower at 62.14% using the same metric of a tolerance of 2 points. That tolerance needs to be increased to more than 6 to see similar performance, which is acceptable.
 <table>
   <tr>
     <td style="width:33%; text-align:center;"><img src="assets/IMG/pcapred.png" alt="Image 1" width="100%" /></td>
@@ -247,8 +252,10 @@ Surprisingly, to maintain 90% cumulative variance, 17 principal components are n
   </tr>
 </table>
 
-*Figure 4: Performance graphs of Ridge Regression with 17 Principal Components*
+*Figure 5: Performance graphs of Ridge Regression with 17 Principal Components*
+
 If only 10 principal components are used, a parameter I originally had in mind, we see a major decrease in performance, with RMSE of 3.378 and accuracy of only 52.19%, not much better than guessing. However, it can be argued that it doesn't perform much worse than 17 principal components in a real-world setting since increasing the threshold metric to 6 points will see similar accuracy between two models. 
+
 <table>
   <tr>
     <td style="width:33%; text-align:center;"><img src="assets/IMG/pca2pred.png" alt="Image 1" width="100%" /></td>
@@ -257,7 +264,8 @@ If only 10 principal components are used, a parameter I originally had in mind, 
   </tr>
 </table>
 
-*Figure 5: Performance graphs of Ridge Regression with 10 Principal Components*
+*Figure 6: Performance graphs of Ridge Regression with 10 Principal Components*
+
 #### Discussion
 Surprisingly, every feature important and informative in the original dataset, which makes sense in hindsight since the dataset is highly synthetic and the features chosen are all major factors that will affect a student's performance.
 
